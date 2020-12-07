@@ -1,5 +1,5 @@
 class AllMembers
-  class Team
+  class Team < Logger
     attr_reader :graphql, :login, :name
 
     def initialize(params)
@@ -9,6 +9,7 @@ class AllMembers
     end
 
     def members
+      log "Fetching all members of team #{name}"
       @list ||= get_all_members
     end
 
