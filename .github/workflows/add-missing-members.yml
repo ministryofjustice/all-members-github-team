@@ -1,6 +1,8 @@
 name: Add org. members to team
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
 
 env:
   ORGANIZATION: "ministryofjustice"
