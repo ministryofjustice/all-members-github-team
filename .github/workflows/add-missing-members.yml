@@ -1,0 +1,15 @@
+name: Add org. members to team
+on:
+  workflow_dispatch:
+
+env:
+  ORGANIZATION: "ministryofjustice"
+  TEAM: "all-org-members"
+  ADMIN_GITHUB_TOKEN: ${{ secrets.ADMIN_GITHUB_TOKEN }}
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - run: ./bin/add-missing-members.rb
