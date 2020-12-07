@@ -1,5 +1,5 @@
 class AllMembers
-  class Organization
+  class Organization < Logger
     attr_reader :graphql, :login
 
     def initialize(params)
@@ -8,6 +8,7 @@ class AllMembers
     end
 
     def members
+      log "Fetching all organization members"
       @list ||= get_all_members
     end
 
