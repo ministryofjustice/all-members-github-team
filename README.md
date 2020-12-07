@@ -2,7 +2,7 @@
 
 GitHub used to automatically provide a team consisting of all current members of the organization, but they don't anymore.
 
-This repository maintains GitHub team consisting of all members of the organization, so that we can grant access to repositories where everyone should have permissions.
+This repository maintains a [GitHub team](https://github.com/orgs/ministryofjustice/teams/all-org-members) consisting of all members of the organization, so that we can grant access to repositories where everyone should have permissions.
 
 ## How it works
 
