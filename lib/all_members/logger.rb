@@ -3,7 +3,7 @@ class AllMembers
     def log(msg)
       puts [
         Time.now.strftime("%Y-%m-%d %H:%M:%S"),
-        msg
+        msg,
       ].join(" ")
     end
   end

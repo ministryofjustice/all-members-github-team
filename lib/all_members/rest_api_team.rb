@@ -29,7 +29,7 @@ class AllMembers
         API_URL,
         "orgs", organization,
         "teams", team,
-        "memberships", login
+        "memberships", login,
       ].join("/")
 
       uri = URI.parse(url)
@@ -41,7 +41,7 @@ class AllMembers
 
       req = request(method, uri.path, headers)
 
-      Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https') do |http|
+      Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == "https") do |http|
         http.request(req)
       end
     end
