@@ -15,3 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@main
       - run: ./bin/add-missing-members.rb
+      - name: Report failure to Slack
+        if: always()
+        uses: ravsamhq/notify-slack-action@v1
+        with:
+          status: ${{ job.status }}
+          notify_when: 'failure'
+          notification_title: 'Failed GitHub Action Run'
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
