@@ -1,5 +1,7 @@
 # Maintain a GitHub team consisting of all current members of our GitHub organization
 
+[![repo standards badge](https://img.shields.io/badge/dynamic/json?color=blue&style=for-the-badge&logo=github&label=MoJ%20Compliant&query=%24.data%5B%3F%28%40.name%20%3D%3D%20%22all-org-members-github-team%22%29%5D.status&url=https%3A%2F%2Foperations-engineering-reports.cloud-platform.service.justice.gov.uk%2Fgithub_repositories)](https://operations-engineering-reports.cloud-platform.service.justice.gov.uk/github_repositories#all-org-members-github-team "Link to report")
+
 GitHub used to automatically provide a team consisting of all current members of the organization, but they don't anymore.
 
 This repository maintains a [GitHub team](https://github.com/orgs/ministryofjustice/teams/all-org-members) consisting of all members of the organization, so that we can grant access to repositories where everyone should have permissions.
