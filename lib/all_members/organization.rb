@@ -20,9 +20,14 @@ class AllMembers
 
       loop do
         data = get_members(end_cursor)
-        members += data.fetch("edges").map { |d| d.dig("node", "login") }
-        break unless data.dig("pageInfo", "hasNextPage")
-        end_cursor = data.dig("pageInfo", "endCursor")
+        if data
+          members += data.fetch("edges").map { |d| d.dig("node", "login") }
+          break unless data.dig("pageInfo", "hasNextPage")
+          end_cursor = data.dig("pageInfo", "endCursor")
+        else
+          warn("organization.rb:get_all_members(): graphql query data missing")
+          abort
+        end
       end
 
       members
