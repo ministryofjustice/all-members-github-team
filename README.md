@@ -8,11 +8,11 @@ This repository maintains a [GitHub team](https://github.com/orgs/ministryofjust
 
 ## How it works
 
-This runs as a scheduled [GitHub action](./github/workflows/add-missing-members.yml) which uses the GitHub GrphaQL API to fetch a list of all organization members, and a list of all the members of the `all-org-members` team.
+This runs as a scheduled [GitHub action](./github/workflows/add-missing-members.yml) which uses the GitHub GraphQL API to fetch a list of all organization members, and a list of all the members of the `all-org-members` team.
 
 Any organization members who are not team members are added to the team.
 
-The GrphaQL API does not expose methods to add/remove team members, so we use the REST API for that part.
+The GraphQL API does not expose methods to add/remove team members, so we use the REST API for that part.
 
 ## Pre-requisites
 
