@@ -12,7 +12,7 @@ This runs as a scheduled [GitHub action](./github/workflows/add-missing-members.
 
 Any organization members who are not team members are added to the team.
 
-The GrphaQL API does not expose methods to add/remove team members, so we use the REST API for that part.
+The GraphQL API does not expose methods to add/remove team members, so we use the REST API for that part.
 
 ## Pre-requisites
 
